@@ -1,0 +1,15 @@
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+  flex: 1;
+}
