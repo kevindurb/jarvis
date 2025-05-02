@@ -2,6 +2,7 @@ import calculator from "./calculator";
 import currentDateTime from "./currentDateTime";
 import currentLocation from "./currentLocation";
 import ipAddress from "./ipAddress";
+import webBrowser from "./webBrowser";
 import webSearch from "./webSearch";
 
 export default [
@@ -10,4 +11,5 @@ export default [
   calculator,
   ipAddress,
   webSearch,
+  webBrowser,
 ]
