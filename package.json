@@ -14,6 +14,7 @@
     "@langchain/core": "^0.3.50",
     "@langchain/langgraph": "^0.2.67",
     "@langchain/ollama": "^0.2.0",
+    "@langchain/tavily": "^0.1.1",
     "biome": "^0.3.3",
     "iplocation": "^7.2.0",
     "mathjs": "^14.4.0",

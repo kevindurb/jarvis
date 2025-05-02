@@ -8,6 +8,7 @@
         "@langchain/core": "^0.3.50",
         "@langchain/langgraph": "^0.2.67",
         "@langchain/ollama": "^0.2.0",
+        "@langchain/tavily": "^0.1.1",
         "biome": "^0.3.3",
         "iplocation": "^7.2.0",
         "mathjs": "^14.4.0",
@@ -47,6 +48,8 @@
     "@langchain/ollama": ["@langchain/ollama@0.2.0", "", { "dependencies": { "ollama": "^0.5.12", "uuid": "^10.0.0", "zod": "^3.24.1", "zod-to-json-schema": "^3.24.1" }, "peerDependencies": { "@langchain/core": ">=0.2.21 <0.4.0" } }, "sha512-jLlYFqt+nbhaJKLakk7lRTWHZJ7wHeJLM6yuv4jToQ8zPzpL//372+MjggDoW0mnw8ofysg1T2C6mEJspKJtiA=="],
 
     "@langchain/openai": ["@langchain/openai@0.5.8", "", { "dependencies": { "js-tiktoken": "^1.0.12", "openai": "^4.96.0", "zod": "^3.22.4", "zod-to-json-schema": "^3.22.3" }, "peerDependencies": { "@langchain/core": ">=0.3.48 <0.4.0" } }, "sha512-ppHsM3CiaGFglwwC9iFZ6XdRcr2kiX9WMXJWAxFbcyeB32n2tyoYOLZj7fSBD+6ASu/VuM1uhwVbgg25RrULpA=="],
+
+    "@langchain/tavily": ["@langchain/tavily@0.1.1", "", { "dependencies": { "zod": "^3.24.2" }, "peerDependencies": { "@langchain/core": ">=0.3.39 <0.4.0" } }, "sha512-nvg/gJkt9F8xOlMDoP8YR22BdUz9IjsHFYp3LjCsjFq2SMlKicIWDP9M8Z4Pv0Zd9zHYk4v9Ljr3TZfCj39LRA=="],
 
     "@langchain/textsplitters": ["@langchain/textsplitters@0.1.0", "", { "dependencies": { "js-tiktoken": "^1.0.12" }, "peerDependencies": { "@langchain/core": ">=0.2.21 <0.4.0" } }, "sha512-djI4uw9rlkAb5iMhtLED+xJebDdAG935AdP4eRTB02R7OB/act55Bj9wsskhZsvuyQRpO4O1wQOp85s6T6GWmw=="],
 
