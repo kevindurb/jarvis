@@ -1,0 +1,22 @@
+{
+  "name": "jarvis",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.42",
+    "@langchain/core": "^0.3.50",
+    "@langchain/langgraph": "^0.2.67",
+    "@langchain/ollama": "^0.2.0",
+    "biome": "^0.3.3",
+    "iplocation": "^7.2.0",
+    "mathjs": "^14.4.0",
+    "public-ip": "^7.0.1"
+  }
+}
