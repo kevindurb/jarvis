@@ -1,26 +1,22 @@
-import { StateGraph, END, START } from "@langchain/langgraph";
+import { StateGraph, END, START, MemorySaver } from "@langchain/langgraph";
 import { AgentState } from "./AgentState";
-import type { AIMessage } from "@langchain/core/messages";
 import genericReact from "./agents/genericReact";
-import tool from "./agents/tool";
+import router from "./router";
+import chat from "./agents/chat";
 
 const workflow = new StateGraph(AgentState)
+.addNode('chat', chat)
+.addNode('router', router)
 .addNode("agent", genericReact)
-.addNode("tool", tool);
 
-workflow.addEdge(START, 'agent');
-workflow.addConditionalEdges(
-  "agent",
-  (state) => {
-    const messages = state.messages;
-    const lastMessage = messages[messages.length - 1] as AIMessage;
-    if (lastMessage?.tool_calls && lastMessage.tool_calls.length > 0) {
-      return 'tool';
-    }
-    return END;
-  },
-);
+workflow.addEdge(START, 'router');
+workflow.addConditionalEdges('router', (state) => {
+  return state.routeDestination ?? 'GeneralConversation';
+}, {
+  'GeneralConversation': 'chat',
+  'SimpleRequest': 'agent',
+  'ComplexPlan': 'agent'
+})
+workflow.addEdge('agent', END)
 
-workflow.addEdge("tool", "agent");
-
-export const app = workflow.compile();
+export const app = workflow.compile({ checkpointer: new MemorySaver() });

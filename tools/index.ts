@@ -1,3 +1,4 @@
+import type { Tool } from "@langchain/core/tools";
 import calculator from "./calculator";
 import currentDateTime from "./currentDateTime";
 import currentLocation from "./currentLocation";
